@@ -1,0 +1,14 @@
+# Rebuild locally; do not commit executables
+bin/
+*.o
+__pycache__/
+*.pyc
+# Raw runs can include local usernames/host names/configuration details.
+# Move reviewed, anonymized evidence into results/sanitized/.
+results/runs/
+# Do not accidentally commit credentials or private config
+.env
+*.key
+*.pem
+
+/results/validation/

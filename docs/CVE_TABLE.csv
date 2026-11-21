@@ -1,0 +1,4 @@
+CVE,subsystem,weakness,impact,affected_summary,fix_commit_url,primary_source
+CVE-2015-7613,System V IPC,CWE-362 race,local privilege escalation,Up to Linux 4.2.3 in original description; check distro backports,https://github.com/torvalds/linux/commit/b9a532277938798b53178d5a66af6e2915cb27cf,https://nvd.nist.gov/vuln/detail/CVE-2015-7613
+CVE-2017-11176,POSIX mqueue mq_notify,CWE-416 use-after-free,local DoS or other impact,Through Linux 4.11.9 in original description; check distro backports,https://github.com/torvalds/linux/commit/f991af3daabaecff34684fd51fac80319d1baad1,https://nvd.nist.gov/vuln/detail/CVE-2017-11176
+CVE-2021-47069,POSIX mqueue/System V IPC/semaphores,CWE-672 expired resource reference,kernel crash possible,Version-specific branches; verify backports,https://git.kernel.org/stable/c/4528c0c323085e645b8765913b4a7fd42cf49b65,https://nvd.nist.gov/vuln/detail/CVE-2021-47069

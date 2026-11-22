@@ -1,0 +1,9 @@
+NAMESPACE CREATED key=0x5300f62d qid=37
+HOST IPC namespace: ipc:[4026531839]
+NAMESPACE VISIBLE key=0x5300f62d qid=37
+=== Child IPC namespace (requires unshare permission) ===
+CHILD IPC namespace: ipc:[4026533123]
+NAMESPACE HIDDEN key=0x5300f62d errno=2 (No such file or directory) EXPECTED
+PASS: queue is not visible from a new IPC namespace
+NAMESPACE CLEANUP=OK
+EXIT_CODE=0

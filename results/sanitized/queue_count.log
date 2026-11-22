@@ -1,0 +1,4 @@
+QUEUE_COUNT requested=6 created=6 stop_errno=0 (none)
+RESULT kind=queue_count limit=6 messages=6 bytes=0 errno_full=0
+QUEUE_COUNT CLEANUP=OK
+EXIT_CODE=0

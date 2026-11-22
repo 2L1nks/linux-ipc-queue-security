@@ -1,0 +1,3 @@
+RESOURCE queues_created=8 requested_queues=8 payload_bytes=16384 messages=32 hold_seconds=5
+RESULT kind=resource limit=2048 messages=32 bytes=16384 queues=8
+RESOURCE CLEANUP=OK removed=8

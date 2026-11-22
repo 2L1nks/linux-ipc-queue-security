@@ -1,0 +1,21 @@
+Host System V limits (READ ONLY):
+kernel.msgmnb = 16384
+kernel.msgmni = 32000
+
+New IPC namespace: bounds are changed ONLY within that namespace
+Child IPC namespace: ipc:[4026533123]
+kernel.msgmnb = 2048
+kernel.msgmni = 4
+SYSV_LIMIT queue_id=0 msgmax=8192 queue_bytes_limit=2048 payload=512
+SYSV_LIMIT sent=4 qnum=4 used_bytes=2048 full_errno=11 (Resource temporarily unavailable)
+RESULT kind=sysv limit=2048 messages=4 bytes=2048 errno_full=11
+SYSV_OVERSIZE size=8193 rc=-1 errno=22 (Invalid argument)
+SYSV_LIMIT CLEANUP=OK
+QUEUE_COUNT requested=6 created=4 stop_errno=28 (No space left on device)
+RESULT kind=queue_count limit=6 messages=4 bytes=0 errno_full=28
+QUEUE_COUNT CLEANUP=OK
+
+Host System V limits (unchanged):
+kernel.msgmnb = 16384
+kernel.msgmni = 32000
+EXIT_CODE=0

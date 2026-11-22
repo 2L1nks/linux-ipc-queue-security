@@ -1,0 +1,6 @@
+PERMISSION CREATED key=0x5200f5fe qid=36 uid=1000 mode=0600
+TEST owner should have access:
+PERMISSION DENIED uid=65534 errno=13 (Permission denied) EXPECTED
+PASS: DAC access blocked for nobody
+PERMISSION CLEANUP=OK
+EXIT_CODE=0

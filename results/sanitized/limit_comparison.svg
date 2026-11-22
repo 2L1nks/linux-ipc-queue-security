@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="420" viewBox="0 0 850 420">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="34" y="36" font-size="22" font-family="sans-serif" fill="#0f172a">Message queue capacity: bounded tests</text>
+<text x="34" y="60" font-size="13" font-family="sans-serif" fill="#475569">Each bar shows messages accepted before EAGAIN (separate IPC APIs)</text>
+<text x="70" y="88" font-size="14" font-family="sans-serif" fill="#111827">System V: 4096-byte queue</text>
+<rect x="70" y="98" width="550.0" height="30" rx="4" fill="#2c65ac"/>
+<text x="632.0" y="119" font-size="14" font-family="sans-serif" fill="#111827">8 messages</text>
+<text x="70" y="163" font-size="14" font-family="sans-serif" fill="#111827">System V: 2048-byte queue</text>
+<rect x="70" y="173" width="275.0" height="30" rx="4" fill="#2c65ac"/>
+<text x="357.0" y="194" font-size="14" font-family="sans-serif" fill="#111827">4 messages</text>
+<text x="70" y="238" font-size="14" font-family="sans-serif" fill="#111827">POSIX: 4-message queue</text>
+<rect x="70" y="248" width="275.0" height="30" rx="4" fill="#2c65ac"/>
+<text x="357.0" y="269" font-size="14" font-family="sans-serif" fill="#111827">4 messages</text>
+<text x="70" y="313" font-size="14" font-family="sans-serif" fill="#111827">POSIX: 2-message queue</text>
+<rect x="70" y="323" width="137.5" height="30" rx="4" fill="#2c65ac"/>
+<text x="219.5" y="344" font-size="14" font-family="sans-serif" fill="#111827">2 messages</text>
+<text x="34" y="400" font-size="12" font-family="sans-serif" fill="#64748b">Not a performance benchmark. Different message sizes and APIs are not directly comparable.</text>
+</svg>

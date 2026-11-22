@@ -1,0 +1,37 @@
+make: Warning: File 'Makefile' has modification time 13989 s in the future
+gcc -std=c11 -O2 -Wall -Wextra -Wpedantic src/sysv_demo.c -o bin/sysv_demo -lrt
+gcc -std=c11 -O2 -Wall -Wextra -Wpedantic src/posix_demo.c -o bin/posix_demo -lrt
+gcc -std=c11 -O2 -Wall -Wextra -Wpedantic src/sysv_limits.c -o bin/sysv_limits -lrt
+gcc -std=c11 -O2 -Wall -Wextra -Wpedantic src/posix_limits.c -o bin/posix_limits -lrt
+gcc -std=c11 -O2 -Wall -Wextra -Wpedantic src/permission_probe.c -o bin/permission_probe -lrt
+gcc -std=c11 -O2 -Wall -Wextra -Wpedantic src/namespace_probe.c -o bin/namespace_probe -lrt
+gcc -std=c11 -O2 -Wall -Wextra -Wpedantic src/resource_probe.c -o bin/resource_probe -lrt
+gcc -std=c11 -O2 -Wall -Wextra -Wpedantic src/queue_count_probe.c -o bin/queue_count_probe -lrt
+bash scripts/verify_project.sh
+=== verify sysv_demo ===
+SYSV queue_id=28 parent_pid=259566
+SYSV SENT bytes=23
+SYSV RECEIVED child_pid=259567 type=1 bytes=23 text=Hello via System V IPC
+SYSV CLEANUP=OK
+PASS sysv_demo
+=== verify posix_demo ===
+POSIX queue=/ipc_course_demo_259570 parent_pid=259570
+POSIX SENT priority=3 bytes=23
+POSIX RECEIVED child_pid=259571 priority=3 bytes=23 text=Hello via POSIX mqueue
+POSIX CLEANUP=OK
+PASS posix_demo
+=== verify sysv_limits ===
+SYSV_LIMIT queue_id=29 msgmax=8192 queue_bytes_limit=2048 payload=512
+SYSV_LIMIT sent=4 qnum=4 used_bytes=2048 full_errno=11 (Resource temporarily unavailable)
+RESULT kind=sysv limit=2048 messages=4 bytes=2048 errno_full=11
+SYSV_OVERSIZE size=8193 rc=-1 errno=22 (Invalid argument)
+SYSV_LIMIT CLEANUP=OK
+PASS sysv_limits
+=== verify posix_limits ===
+POSIX_LIMIT name=/ipc_course_limit_259578 maxmsg=2 msgsize=256 sent=2 curmsgs=2 full_errno=11 (Resource temporarily unavailable)
+RESULT kind=posix limit=2 messages=2 bytes=512 errno_full=11
+POSIX_OVERSIZE size=257 rc=-1 errno=90 (Message too long)
+POSIX_LIMIT CLEANUP=OK
+PASS posix_limits
+make: warning:  Clock skew detected.  Your build may be incomplete.
+EXIT_CODE=0

@@ -1,0 +1,89 @@
+=== SNAPSHOT BEFORE ===
+2026-11-21T16:12:25Z
+
+------ Messages Status --------
+allocated queues = 0
+used headers = 0
+used space = 0 bytes
+
+------ Shared Memory Status --------
+segments allocated 14
+pages allocated 21597
+pages resident  5152
+pages swapped   330
+Swap performance: 0 attempts	 0 successes
+
+------ Semaphore Status --------
+used arrays = 0
+allocated semaphores = 0
+
+--- /proc/meminfo (KiB) ---
+MemAvailable:     449424 kB
+Slab:             179328 kB
+SReclaimable:     118172 kB
+SUnreclaim:        61156 kB
+Committed_AS:    5814588 kB
+--- /proc/sysvipc/msg ---
+       key      msqid perms      cbytes       qnum lspid lrpid   uid   gid  cuid  cgid      stime      rtime      ctime
+=== SNAPSHOT DURING ===
+2026-11-21T16:12:26Z
+
+------ Messages Status --------
+allocated queues = 8
+used headers = 32
+used space = 16384 bytes
+
+------ Shared Memory Status --------
+segments allocated 14
+pages allocated 21597
+pages resident  5152
+pages swapped   330
+Swap performance: 0 attempts	 0 successes
+
+------ Semaphore Status --------
+used arrays = 0
+allocated semaphores = 0
+
+--- /proc/meminfo (KiB) ---
+MemAvailable:     449720 kB
+Slab:             179360 kB
+SReclaimable:     118172 kB
+SUnreclaim:        61188 kB
+Committed_AS:    5814976 kB
+--- /proc/sysvipc/msg ---
+       key      msqid perms      cbytes       qnum lspid lrpid   uid   gid  cuid  cgid      stime      rtime      ctime
+         0         16   600        2048          4 243912     0  1000  1000  1000  1000 1795277545          0 1795277545
+         0         17   600        2048          4 243912     0  1000  1000  1000  1000 1795277545          0 1795277545
+         0         18   600        2048          4 243912     0  1000  1000  1000  1000 1795277545          0 1795277545
+         0         19   600        2048          4 243912     0  1000  1000  1000  1000 1795277545          0 1795277545
+         0         20   600        2048          4 243912     0  1000  1000  1000  1000 1795277545          0 1795277545
+         0         21   600        2048          4 243912     0  1000  1000  1000  1000 1795277545          0 1795277545
+         0         22   600        2048          4 243912     0  1000  1000  1000  1000 1795277545          0 1795277545
+         0         23   600        2048          4 243912     0  1000  1000  1000  1000 1795277545          0 1795277545
+=== SNAPSHOT AFTER ===
+2026-11-21T16:12:30Z
+
+------ Messages Status --------
+allocated queues = 0
+used headers = 0
+used space = 0 bytes
+
+------ Shared Memory Status --------
+segments allocated 14
+pages allocated 21597
+pages resident  5152
+pages swapped   330
+Swap performance: 0 attempts	 0 successes
+
+------ Semaphore Status --------
+used arrays = 0
+allocated semaphores = 0
+
+--- /proc/meminfo (KiB) ---
+MemAvailable:     449844 kB
+Slab:             179360 kB
+SReclaimable:     118172 kB
+SUnreclaim:        61188 kB
+Committed_AS:    5814720 kB
+--- /proc/sysvipc/msg ---
+       key      msqid perms      cbytes       qnum lspid lrpid   uid   gid  cuid  cgid      stime      rtime      ctime
